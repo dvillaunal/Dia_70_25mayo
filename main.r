@@ -1,4 +1,4 @@
-## ---- eval=FALSE, include=TRUE----------------------------------------------------
+## ---- eval=FALSE, include=TRUE--------------------------------------------------
 ## "Protocolo:
 ## 
 ##  1. Daniel Felipe Villa Rengifo
@@ -11,12 +11,12 @@
 ##     https://drive.google.com/drive/u/1/folders/1QfvE0DLXE5NQ3kJGEf0F7NZwUx8odv8N"
 
 
-## ---------------------------------------------------------------------------------
+## -------------------------------------------------------------------------------
 #install.packages("tidyverse")
 #library(tidyverse)
 
 
-## ---------------------------------------------------------------------------------
+## -------------------------------------------------------------------------------
 # Leemos la base de datos:
 palabras <- read.table(file = "ListaPalabras_v20200520.txt",
                        header = F, stringsAsFactors = F)
@@ -50,14 +50,14 @@ isograma1.0 <- function(x, num){
 }
 
 
-## ---------------------------------------------------------------------------------
+## -------------------------------------------------------------------------------
 # Ahora por cuestiones de la memoria del sistema analizaremos los primeros 200 palabras según el orden del data.frame a ver si hay isogramas:
 
-isograma <- isograma1.0(palabras, 200)
+isograma <- isograma1.0(palabras, 500)
 isograma$Isogramas <- as.character(isograma$Isogramas)
 
 
-## ---------------------------------------------------------------------------------
+## -------------------------------------------------------------------------------
 # Ahora exportamos el resultado por orden alfabletico:
 isograma[order(isograma$Isogramas),]
 

@@ -69,7 +69,7 @@ isograma1.0 <- function(x, num){
 ```{r}
 # Ahora por cuestiones de la memoria del sistema analizaremos los primeros 200 palabras según el orden del data.frame a ver si hay isogramas:
 
-isograma <- isograma1.0(palabras, 200)
+isograma <- isograma1.0(palabras, 500)
 isograma$Isogramas <- as.character(isograma$Isogramas)
 ```
 
