@@ -15,8 +15,7 @@ __Genere un archivo de isogramas en orden alfabetico. Además imprima por pantal
 
 
 ```{r}
-#install.packages("tidyverse")
-#library(tidyverse)
+#Para este ejercicio no se utlizan librerias por ende puede correr tranquilamente en el replit.
 ```
 
 
@@ -58,7 +57,7 @@ isograma1.0 <- function(x, num){
 ```{r}
 # Ahora por cuestiones de la memoria del sistema analizaremos los primeros 200 palabras según el orden del data.frame a ver si hay isogramas:
 
-isograma <- isograma1.0(palabras, 500)
+isograma <- isograma1.0(palabras, length(palabras[[1]]))
 isograma$Isogramas <- as.character(isograma$Isogramas)
 ```
 
@@ -99,11 +98,6 @@ NumeroDeLetras <- data.frame(table(isograma$NumLetras))
 # Renombramos las columnas:
 names(NumeroDeLetras) <- c("# de Letras", "Freq")
 
+
 print(NumeroDeLetras)
-```
-
-
-```{r, eval=FALSE, include=FALSE}
-library(knitr)
-purl("Dia_70_25mayo.Rmd", "main.r")
 ```
